@@ -2,7 +2,6 @@
 
 require_relative 'helpers/csv'
 require_relative 'helpers/matcher'
-require_relative 'helpers/float'
 require_relative 'classifier/classifier'
 
 module SalesTaxes
@@ -10,10 +9,9 @@ module SalesTaxes
   class Appraiser
     using CSVHelper
     using MatcherHelper
-    using FloatHelper
+    attr_reader :products
 
     def initialize(pathname)
-      @total_taxes = 0.0
       @products = CSVHelper.read_file(pathname)
     end
 
