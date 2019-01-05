@@ -10,6 +10,6 @@ require 'parser'
 
 Parser.parse_options!
 
-raise ArgumentError, 'Provide a input file' if Parser::OPTIONS[:filename].nil?
+raise ArgumentError, 'Provide an input file' if Parser::OPTIONS[:filename].nil?
 
 SalesTaxes::Appraiser.new(Parser::OPTIONS[:filename])
