@@ -1,3 +1,15 @@
+# frozen_string_literal: true
+
 #!/usr/bin/env ruby
 
-require_relative '../lib/sales_taxes'
+lib = File.expand_path('../lib', __dir__)
+$LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
+
+require 'sales_taxes'
+require 'parser'
+
+Parser.parse_options!
+
+raise ArgumentError, 'Provide a input file' if Parser::OPTIONS[:filename].nil?
+
+SalesTaxes::Appraiser.new(Parser::OPTIONS[:filename])
