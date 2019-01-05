@@ -1,4 +1,4 @@
-# Installation
+## Installation
 
 ```
   $ git clone https://github.com/devpolish/sales_taxes.git
@@ -6,8 +6,14 @@
   $ bundle install
 ```
 
-# How to run tests
+## How to run tests
 
 ```
   $ rspec .
-```
+``` 
+
+## About why I use "The magic Ruby's comment"
+
+Here an article that I wrote explaining about it.
+
+[Ruby: About Deep Symbolize Keys and # frozen_string_literal: true](https://medium.com/bit-concept/ruby-about-deep-symbolize-keys-and-frozen-string-literal-true-e773725549ad)
