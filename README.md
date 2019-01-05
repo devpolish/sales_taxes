@@ -1,5 +1,5 @@
 ## Installation
-
+[![Maintainability](https://api.codeclimate.com/v1/badges/7371790f29640aaff790/maintainability)](https://codeclimate.com/github/devpolish/sales_taxes/maintainability)
 ```
   $ git clone https://github.com/devpolish/sales_taxes.git
   $ cd sales_taxes
