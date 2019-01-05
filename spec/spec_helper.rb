@@ -17,6 +17,12 @@
 require 'shoulda-matchers'
 require 'support/fixture_helper'
 require 'support/model_helper'
+require 'simplecov'
+require 'simplecov-console'
+
+
+SimpleCov.formatter = SimpleCov::Formatter::Console
+SimpleCov.start
 
 lib = File.expand_path('../lib', __dir__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
