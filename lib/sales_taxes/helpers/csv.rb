@@ -9,7 +9,7 @@ module CSVHelper
   def self.read_file(pathname)
     CSV.read(pathname)
   rescue Errno::ENOENT => exception
-    raise ArgumentError, "#{exception.class} File not found"
+    exception.class
   end
 
   def self.write_file(pathname, data)
@@ -19,6 +19,6 @@ module CSVHelper
       data.each { |row| csv << row }
     end
   rescue Errno::ENOENT => exception
-    raise ArgumentError, "#{exception.class} Pathname not found"
+    exception.class
   end
 end
